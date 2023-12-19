@@ -1,0 +1,585 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+@font-face {
+    font-family: 'NiasecLux';
+    src: url('../../../fonts/NiasecLux/NiasecLuxDEMO-Regular.ttf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+ h2, p {
+    margin: 0 !important;
+}
+h1{
+    margin: 0px 0px 40px 0px !important;
+}
+*, *::before, *::after {
+    box-sizing: border-box !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    
+}
+
+.container {
+    min-width: 1920px !important;
+    margin: 0 auto !important;
+}
+
+body {
+    margin: 0 !important;
+    scroll-behavior: smooth !important;
+    min-height: 100vh !important;
+    font-family: 'Montserrat', sans-serif !important;
+    overflow-x: hidden !important;
+}
+
+header {
+    min-width: 1920px !important;
+    background-color: #000000 !important;
+}
+
+.header-container {
+    display: flex !important;
+    max-height: 92px !important;
+}
+
+.header-container a {
+    text-decoration: none !important;
+}
+
+.navbar-brand {
+    font-family: 'NiasecLux' !important;
+    color: #D7BB71 !important;
+    font-weight: 700 !important;
+    font-size: 40px !important;
+    text-transform: uppercase !important;
+    margin: 22px 303px 21px 279px !important;
+    letter-spacing: 0.24em !important;
+}
+
+.nav-list {
+    display: flex !important;
+    color: #DCBD6B !important;
+    list-style: none !important;
+    text-transform: uppercase !important;
+    margin: 32px 0 31px !important;
+}
+
+.arrow {
+    height: 12px !important;
+    width: 12px !important;
+    border-top: 2px solid #D7BB71 !important;
+    border-left: 2px solid #D7BB71 !important;
+    transform: rotate(45deg) !important;
+    margin: 11px 0 0 9px !important;
+    transition: all 0.3s !important;
+}
+
+.arrow-active {
+    transform: rotate(-135deg) !important;
+    margin: 5px 0 0 9px !important;
+    transition: all 0.3s !important;
+}
+
+
+.nav-item {
+    display: flex !important;
+    position: relative !important;
+    margin-right: 144px !important;
+    font-weight: 400 !important;
+    font-size: 24px !important;
+    cursor: pointer !important;
+}
+
+.nav-item:hover::before {
+    opacity: 1 !important;
+}
+
+.nav-item:nth-child(2)::before {
+    opacity: 0 !important;
+}
+
+.nav-item::before {
+    content: '' !important;
+    opacity: 0 !important;
+    position: absolute !important;
+    width: 100% !important;
+    height: 1px !important;
+    background-color: #D7BB71 !important;
+    left: 0 !important;
+    bottom: -5px !important;
+    transition: all 0.7s ease !important;
+}
+
+.nav-item:nth-child(2) {
+    margin-right: 146px !important;
+}
+
+.nav-item:nth-child(3) {
+    margin-right: 0 !important;
+}
+
+.dropdown {
+	position: absolute !important;
+	left: -22px !important;
+	top: 100% !important;
+	width: 290px !important;
+	background-color: #000000 !important;
+	opacity: 0 !important;
+	visibility: hidden !important;
+	transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out !important;
+    border: 1px solid #D7BB71 !important;
+}
+
+.dropdown-list {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 15px !important;
+    list-style: none !important;
+    padding: 20px !important;
+}
+
+.dropdown-active {
+	opacity: 1 !important;
+	visibility: visible !important;
+}
+
+.popup-bg {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100vh !important;
+    z-index: 1 !important;
+    transition: all 0.5s ease 0s !important;
+    display: none !important;
+}
+
+.popup-active {
+    display: block !important;
+    transition: all 0.5s ease 0s !important;
+}
+
+.popup {
+    display: flex !important;
+    flex-direction: column !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    background: #000000 !important;
+    width: 899px !important;
+    height: 933px !important;
+    border: 1px solid #D7BB71 !important;
+    color: #D7BB71 !important;
+    align-items: center !important;
+}
+
+.close-button {
+    background: none !important;
+    height: 41px !important;
+    width: 41px !important;
+    margin: 44px 51px 0 807px !important;
+}
+
+.popup h1 {
+    font-weight: 700 !important;
+    font-size: 40px !important;
+    text-transform: uppercase !important;
+    margin-bottom: 28px !important;
+}
+
+.name, .email {
+    margin-bottom: 47px !important;
+}
+
+.phone {
+    margin-bottom: 30px !important;
+}
+
+.name input, .email input ,.phone input {
+    width: 649px !important;
+    height: 71px !important;
+    background: none !important;
+    border: 1px solid #D7BB71 !important;
+    color: #D7BB71 !important;
+    font-size: 24px !important;
+    padding-left: 10px !important;
+}
+
+.name-text, .email-text, .phone-text {
+    font-weight: 400 !important;
+    font-size: 24px !important;
+    text-transform: uppercase !important;
+    margin-bottom: 10px !important;
+}
+
+.popup span {
+    font-weight: 400 !important;
+    font-size: 20px !important;
+    text-transform: uppercase !important;
+    margin-bottom: 72px !important;
+}
+
+.popup-button {
+    background: none !important;
+    border: 1px solid #D7BB71 !important;
+    padding: 25px 42px !important;
+    width: 238px !important;
+    font-family: 'Montserrat' !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    font-size: 24px !important;
+    text-transform: uppercase !important;
+    color: #D7BB71 !important;
+    cursor: pointer !important;
+}
+
+.popup-button:hover {
+    background: #D7BB71 !important;
+    color: #000000 !important;
+    border: 1px solid #000000 !important;
+    transition: all 0.5s ease !important;
+}
+
+.line {
+    width: 100% !important;
+    border-bottom: 1px solid #D7BB71 !important;
+}
+
+hr {
+    opacity: 1 !important;
+}
+
+.border-wine {
+    border-color: #D7BB71 !important;
+}
+
+.wrapper {
+    display: flex !important;
+    width: 1920px !important;
+    margin: 0 auto !important;
+}
+
+.black-gap {
+    gap: 63px !important;
+    background-color: #000000 !important;
+}
+
+.intro-container {
+    display: flex !important;
+    width: 100% !important;
+}
+
+.empty-container {
+    width: 100% !important;
+    background-color: #000000 !important;
+    min-width: 280px !important;
+    border-right: 1px solid #D7BB71 !important;
+    background-size: cover !important;
+}
+
+.empty-container:nth-child(4) {
+    background-color: #0C0D08 !important;
+    min-width: 280px !important;
+    border-left: 1px solid #D7BB71 !important;
+}
+
+.wine-photo {
+    background-image: url("../../../assets/6.png") !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    width: 200% !important;
+    height: 799px !important;
+}
+
+
+.description-card h1 {
+    font-weight: 700 !important;
+    font-size: 40px !important;
+    text-transform: uppercase !important;
+}
+
+.description-card h2 {
+    font-weight: 400 !important;
+    font-size: 40px !important;
+}
+
+.description-card p {
+    text-transform: uppercase !important;
+    font-weight: 400 !important;
+    font-size: 24px !important;
+}
+
+.wine-description button {
+    margin-left: 452px !important;
+    background: none !important;
+    border: 1px solid #D7BB71 !important;
+    padding: 25px 42px !important;
+    width: 238px !important;
+    font-family: 'Montserrat' !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    font-size: 24px !important;
+    text-transform: uppercase !important;
+    color: #D7BB71 !important;
+    cursor: pointer !important;
+}
+
+.wine-description button:hover {
+    background: #D7BB71 !important;
+    color: #000000 !important;
+    border: 1px solid #000000 !important;
+    transition: all 0.5s ease !important;
+}
+
+
+.wine-taste {
+    border-bottom: 1px solid #D7BB71 !important;
+}
+
+.taste-container {
+    display: flex !important;
+    width: 100% !important;
+}
+
+.taste {
+    display: flex !important;
+    background-color: #0C0D08 !important;
+    min-width: 605px !important;
+    border-right: 1px solid #D7BB71 !important;
+    width: 100% !important;
+}
+
+.taste span {
+    font-weight: 700 !important;
+    font-size: 40px !important;
+    color: #D7BB71 !important;
+    margin: 265px 95px 266px auto !important;
+    text-transform: uppercase !important;
+}
+
+.taste-settings {
+    display: flex !important;
+    flex-direction: column !important;
+    background-color: #000000 !important;
+    min-width: 1315px !important;
+    width: 100% !important;
+}
+
+.black-back {
+    background-color: #000000 !important;
+}
+
+.settings { 
+    display: flex !important;
+    margin: 84px 280px 93px 110px !important;
+}
+
+.settings span {
+    font-weight: 400 !important;
+    font-size: 24px !important;
+    color: #D7BB71 !important;
+    text-transform: uppercase !important;
+    margin-right: 19px !important;
+}
+
+.scale {
+    width: 671px !important;
+    height: 35px !important;
+    border: 1px solid #D7BB71 !important;
+}
+
+.scale-bar, .word-bar {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 84px !important;
+    justify-content: center !important;
+}
+
+.word-bar {
+    gap:91px !important;
+    text-align: right !important;
+}
+
+.percent {
+    width: 115px !important;
+    height: 34px !important;
+    background: #D7BB71 !important;
+}
+
+.scale:nth-child(2) .percent {
+    width: 345px !important;
+    height: 34px !important;
+    background: #D7BB71 !important;
+}
+
+.scale:nth-child(3) .percent {
+    width: 460px !important;
+    height: 34px !important;
+    background: #D7BB71 !important;
+}
+
+.scale:nth-child(4) .percent {
+    width: 345px !important;
+    height: 34px !important;
+    background: #D7BB71 !important;
+}
+
+.storage-container {
+    display: flex !important;
+    width:100% !important;
+}
+
+.wine-logo {
+    background-color: #000000 !important;
+    border-right: 1px solid #D7BB71 !important;
+}
+
+.wine-logo p {
+    font-family: 'NiasecLux' !important;
+    color: #D7BB71 !important;
+    font-weight: 400 !important;
+    font-size: 100px !important;
+    text-transform: uppercase !important;
+}
+
+.wine-feeding {
+    background-color: #0C0D08 !important;
+}
+
+.wine-feeding p {
+    font-weight: 700 !important;
+    font-size: 40px !important;
+    color: #D7BB71 !important;
+    text-transform: uppercase !important;
+}
+
+.feeding-bar span:nth-child(2){
+    font-weight: 400 !important;
+    font-size: 45px !important;
+}
+
+.wine-storage {
+    border-bottom: 1px solid #D7BB71 !important;
+}
+
+.wine-testimonial {
+    background-color: #0C0D08 !important;
+}
+
+.testimonial-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 98px !important;
+    min-width: 1167px !important;
+    padding: 100px 358px 97px 394px !important;
+    color:#D7BB71 !important;
+    text-transform: uppercase !important;
+    line-height: 49px !important;
+}
+
+.testimonial-wrapper h1 {
+    font-size: 40px !important;
+    margin-bottom: 25px !important;
+}
+
+.testimonial-wrapper p {
+    font-size: 24px !important;
+}
+
+.testimonial-wrapper button {
+    background: none !important;
+    border: 1px solid #D7BB71 !important;
+    padding: 25px 42px !important;
+    width: 238px !important;
+    font-family: 'Montserrat' !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    font-size: 24px !important;
+    text-transform: uppercase !important;
+    color: #D7BB71 !important;
+    cursor: pointer !important;
+}
+
+.testimonial-wrapper button:hover {
+    background: #D7BB71 !important;
+    color: #000000 !important;
+    border: 1px solid #000000 !important;
+    transition: all 0.5s ease !important;
+}
+
+footer {
+    background-color: #000000 !important;
+    min-width: 1920px !important;
+    height: 250px !important;
+}
+
+.footer-container {
+    color: #D7BB71 !important;
+}
+
+.footer-text {
+    text-transform: uppercase !important;
+    font-weight: 400 !important;
+    font-size: 24px !important;
+}
+
+.wine-feeding text-center h-100 {
+    height: 300px !important;
+}
+
+.wine-description {
+    display: flex !important;
+    flex-direction: column !important;
+    background-color: #0C0D08 !important;
+    color: #D7BB71 !important;
+    border-left: 1px solid #D7BB71 !important;
+}
+
+.wine-description1 {
+    background-color: #0C0D08 !important;
+    color: #D7BB71 !important;
+    border-left: 1px solid #D7BB71 !important;
+}
+
+.a{
+    margin: 190px 0px 0px 0px !important;
+}
+
+.description-card {
+    min-width: 547px !important;
+    margin: 120px 30px 280px 100px!important;
+}
+.description-2022 {
+    min-width: 300px !important;
+    margin: 120px 0px 280px 100px!important;
+}
+
+.preorder {
+    border-radius: 0px !important;
+    margin-left: 300px !important;
+    background: none !important;
+    border: 1px solid #D7BB71 !important;
+    padding: 25px 42px !important;
+    width: 238px !important;
+    font-family: 'Montserrat' !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    font-size: 24px !important;
+    text-transform: uppercase !important;
+    color: #D7BB71 !important;
+    cursor: pointer !important;
+}
+
+.preorder:hover {
+    background: #D7BB71 !important;
+    color: #000000 !important;
+    border: 1px solid #000000 !important;
+    transition: all 0.5s ease !important;
+}
+
+
+.pd{
+  margin: 80px 0px 0px 0px!important;
+}
